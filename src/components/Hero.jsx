@@ -4,6 +4,7 @@ const Hero = () => {
     const canvasRef = useRef(null);
 
     useEffect(() => {
+        /* ── Canvas setup ── */
         const canvas = canvasRef.current;
         const ctx = canvas.getContext("2d");
 
@@ -14,6 +15,7 @@ const Hero = () => {
         resize();
         window.addEventListener("resize", resize);
 
+        /* ── Clase partícula ── */
         const particles = [];
 
         class Particle {
@@ -50,6 +52,7 @@ const Hero = () => {
             }
         }
 
+        /* ── Paleta de colores ── */
         const colors = [
             "#3b82f6", "#60a5fa", "#93c5fd",
             "#f59e0b", "#fbbf24", "#fde68a",
@@ -59,6 +62,7 @@ const Hero = () => {
             "#ffffff",
         ];
 
+        /* ── Explosión de partículas ── */
         const burst = (x, y) => {
             const color = colors[Math.floor(Math.random() * colors.length)];
             const count = Math.floor(Math.random() * 40) + 30;
@@ -67,6 +71,7 @@ const Hero = () => {
             }
         };
 
+        /* ── Loop de animación ── */
         let animId;
         const animate = () => {
             ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -79,12 +84,11 @@ const Hero = () => {
         };
         animate();
 
-        // Burst side fireworks at random intervals
+        /* ── Lanzador lateral de fuegos artificiales ── */
         const launchSide = () => {
             const side = Math.random() < 0.5 ? "left" : "right";
             const w = canvas.width;
             const h = canvas.height;
-
             let x, y;
             if (side === "left") {
                 x = Math.random() * w * 0.18 + 10;
@@ -95,12 +99,13 @@ const Hero = () => {
             burst(x, y);
         };
 
-        // Initial bursts
+        /* ── Ráfaga inicial ── */
         setTimeout(() => launchSide(), 300);
         setTimeout(() => launchSide(), 600);
         setTimeout(() => launchSide(), 900);
         setTimeout(() => launchSide(), 1200);
 
+        /* ── Intervalo periódico ── */
         const interval = setInterval(() => {
             launchSide();
             if (Math.random() < 0.4) setTimeout(() => launchSide(), 250);
@@ -116,77 +121,76 @@ const Hero = () => {
     return (
         <section
             id="inicio"
-            className="min-h-screen flex flex-col justify-center items-center text-center p-8 bg-slate-900 text-white relative overflow-hidden"
+            className="min-h-screen flex flex-col justify-center items-center text-center px-6 py-16 bg-slate-900 text-white relative overflow-hidden"
         >
-            {/* Fireworks canvas */}
+            {/* Canvas de fuegos artificiales */}
             <canvas
                 ref={canvasRef}
                 className="absolute inset-0 pointer-events-none"
                 style={{ zIndex: 0 }}
             />
 
-            {/* Subtle radial glow behind content */}
+            {/* Glow radial de fondo */}
             <div
+                className="absolute inset-0 pointer-events-none"
                 style={{
-                    position: "absolute",
-                    inset: 0,
-                    background:
-                        "radial-gradient(ellipse 60% 50% at 50% 50%, rgba(59,130,246,0.07) 0%, transparent 70%)",
+                    background: "radial-gradient(ellipse 60% 50% at 50% 50%, rgba(59,130,246,0.07) 0%, transparent 70%)",
                     zIndex: 1,
-                    pointerEvents: "none",
                 }}
             />
 
-            {/* Content with zoom-in animation */}
+            {/* Contenido principal con animación de entrada */}
             <div
+                className="relative w-full max-w-3xl mx-auto"
                 style={{
-                    position: "relative",
                     zIndex: 2,
                     animation: "heroZoomIn 1s cubic-bezier(0.22, 1, 0.36, 1) forwards",
                     opacity: 0,
                     transform: "scale(0.75)",
                 }}
             >
-                <h1 className="text-5xl md:text-7xl font-bold mb-4 tracking-tight">
+                {/* Título principal */}
+                <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold mb-4 tracking-tight">
                     Matías{" "}
                     <span
                         className="text-blue-500"
-                        style={{
-                            textShadow: "0 0 30px rgba(59,130,246,0.5)",
-                        }}
+                        style={{ textShadow: "0 0 30px rgba(59,130,246,0.5)" }}
                     >
                         Pasteloff
                     </span>
                 </h1>
 
-                <h2 className="text-xl md:text-3xl font-semibold text-slate-300 mb-6">
+                {/* Subtítulo de rol */}
+                <h2 className="text-base sm:text-xl md:text-3xl font-semibold text-slate-300 mb-6 leading-snug">
                     Full Stack Developer | Estudiante de Ingeniería en Informática
                 </h2>
 
-                <p className="text-lg md:text-xl text-slate-400 max-w-2xl mb-10 leading-relaxed mx-auto text-center">
+                {/* Descripción breve */}
+                <p className="text-sm sm:text-lg text-slate-400 max-w-2xl mb-10 leading-relaxed mx-auto">
                     Cuento con una trayectoria de 6 años programando, con foco actual en Java, Python y SQL.
                     Busco aplicar mi capacidad de resolución de problemas en el desarrollo de software y aportar valor a los proyectos.
                 </p>
 
-                <div className="flex gap-4 justify-center">
+                {/* Botones de acción */}
+                <div className="flex flex-col sm:flex-row gap-3 justify-center items-center">
                     <a
                         href="https://github.com/matiaspasteloff"
                         target="_blank"
                         rel="noreferrer"
-                        className="px-6 py-3 bg-slate-800 hover:bg-slate-700 border border-slate-700 rounded-lg font-medium transition-all duration-300"
+                        className="w-full sm:w-auto px-6 py-3 bg-slate-800 hover:bg-slate-700 border border-slate-700 rounded-lg font-medium transition-all duration-300 text-center"
                     >
                         Ver GitHub
                     </a>
                     <a
                         href="mailto:matiaspasteloff@gmail.com"
-                        className="px-6 py-3 bg-blue-600 hover:bg-blue-500 rounded-lg font-medium shadow-lg shadow-blue-500/30 transition-all duration-300"
+                        className="w-full sm:w-auto px-6 py-3 bg-blue-600 hover:bg-blue-500 rounded-lg font-medium shadow-lg shadow-blue-500/30 transition-all duration-300 text-center"
                     >
                         Contactar
                     </a>
                 </div>
             </div>
 
-            {/* Keyframe injection */}
+            {/* Keyframes de animación de entrada */}
             <style>{`
                 @keyframes heroZoomIn {
                     0%   { opacity: 0; transform: scale(0.75); }
