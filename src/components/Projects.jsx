@@ -5,7 +5,7 @@ const projectsData = [
         subtitle: "Motor de Videojuego RPG",
         tech: ["Java", "POO Avanzada", "Patrones de Diseño"],
         description:
-            "Motor de juego desarrollado desde cero sin librerías externas. Implementación de Patrones de Diseño (State, Strategy), técnica Raycasting para renderizado 3D y sistema de colisiones propio.",
+            "Motor de juego desarrollado desde cero sin librerías externas. Implementación de Patrones de Diseño, técnica Raycasting para renderizado 3D y sistema de colisiones propio.",
         link: "https://github.com/matiaspasteloff/TP-ROLGAR-II",
         accent: "#3b82f6",
         tag: "Game Engine",
@@ -46,7 +46,7 @@ const Projects = () => {
                         color: "#3b82f6",
                         marginBottom: "12px",
                     }}>
-                        Portafolio
+                        Experiencia
                     </p>
                     <h2 style={{
                         fontSize: "clamp(2rem, 5vw, 3rem)",
