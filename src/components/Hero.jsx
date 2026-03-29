@@ -187,15 +187,40 @@ const Hero = () => {
                     >
                         Contactar
                     </a>
+
+                    {/* ── Botón de descarga de CV ── */}
+                    <a
+                        href="/mi-portfolio/cv.pdf"
+                        download="CV_Matias_Pasteloff.pdf"
+                        className="cv-download-btn w-full sm:w-auto px-6 py-3 rounded-lg font-medium transition-all duration-300 text-center flex items-center justify-center gap-2"
+                        style={{
+                            background: "linear-gradient(135deg, rgba(139,92,246,0.15), rgba(59,130,246,0.15))",
+                            border: "1px solid rgba(139,92,246,0.5)",
+                            color: "#c4b5fd",
+                        }}
+                    >
+                        {/* Ícono de descarga */}
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                            <polyline points="7 10 12 15 17 10" />
+                            <line x1="12" y1="15" x2="12" y2="3" />
+                        </svg>
+                        Descargar CV
+                    </a>
                 </div>
             </div>
 
-            {/* Keyframes de animación de entrada */}
+            {/* Keyframes de animación de entrada + hover del botón CV */}
             <style>{`
                 @keyframes heroZoomIn {
                     0%   { opacity: 0; transform: scale(0.75); }
                     60%  { opacity: 1; transform: scale(1.03); }
                     100% { opacity: 1; transform: scale(1); }
+                }
+                .cv-download-btn:hover {
+                    background: linear-gradient(135deg, rgba(139,92,246,0.3), rgba(59,130,246,0.3)) !important;
+                    box-shadow: 0 0 28px rgba(139,92,246,0.35);
+                    border-color: rgba(139,92,246,0.8) !important;
                 }
             `}</style>
         </section>
