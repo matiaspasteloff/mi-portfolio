@@ -1,4 +1,4 @@
-import perfilImg from '../assets/perfil.jpeg';
+import perfilImg from '../assets/perfil.png';
 
 /* ── Datos de estadísticas ── */
 const stats = [
