@@ -53,20 +53,24 @@ const About = () => {
                 </div>
 
                 {/* Main card */}
-                <div style={{
-                    display: "grid", gridTemplateColumns: "1fr 2fr",
-                    background: "linear-gradient(145deg, #0f172a, #0a1122)",
-                    border: "1px solid rgba(59,130,246,0.15)",
-                    borderRadius: "28px", overflow: "hidden",
-                }}>
+                <div
+                    className="flex flex-col md:grid md:grid-cols-[1fr_2fr]"
+                    style={{
+                        background: "linear-gradient(145deg, #0f172a, #0a1122)",
+                        border: "1px solid rgba(59,130,246,0.15)",
+                        borderRadius: "28px", overflow: "hidden",
+                    }}
+                >
                     {/* Left: photo + stats */}
-                    <div style={{
-                        padding: "48px 36px", display: "flex", flexDirection: "column",
-                        alignItems: "center", gap: "36px",
-                        background: "linear-gradient(160deg, rgba(59,130,246,0.1) 0%, transparent 60%)",
-                        borderRight: "1px solid rgba(59,130,246,0.12)",
-                        position: "relative", overflow: "hidden",
-                    }}>
+                    <div
+                        className="border-b border-blue-500/10 md:border-b-0 md:border-r"
+                        style={{
+                            padding: "48px 36px", display: "flex", flexDirection: "column",
+                            alignItems: "center", gap: "36px",
+                            background: "linear-gradient(160deg, rgba(59,130,246,0.1) 0%, transparent 60%)",
+                            position: "relative", overflow: "hidden",
+                        }}
+                    >
                         <div style={{
                             position: "absolute", top: "-40px", left: "50%",
                             transform: "translateX(-50%)", width: "200px", height: "200px",

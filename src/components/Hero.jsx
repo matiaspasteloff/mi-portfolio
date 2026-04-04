@@ -6,8 +6,9 @@ const Hero = () => {
     const { t } = useLanguage();
 
     useEffect(() => {
-        // ... (todo el código del canvas sin cambios) ...
+        if (window.innerWidth < 768) return;
         const canvas = canvasRef.current;
+        if (!canvas) return; 
         const ctx = canvas.getContext("2d");
         const resize = () => { canvas.width = window.innerWidth; canvas.height = window.innerHeight; };
         resize();

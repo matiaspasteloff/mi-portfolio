@@ -72,11 +72,8 @@ const Projects = () => {
                     {projectsData.map((project, index) => (
                         <div
                             key={project.number}
+                            className="flex flex-col md:grid md:grid-cols-[1fr_2fr]"
                             style={{
-                                display: "grid",
-                                // Tip: En móviles esto podría verse apretado, 
-                                // considera usar media queries o flex-wrap en el futuro.
-                                gridTemplateColumns: "1fr 2fr",
                                 borderRadius: "24px",
                                 overflow: "hidden",
                                 border: `1px solid ${project.accent}25`,
@@ -86,10 +83,11 @@ const Projects = () => {
                         >
                             {/* Left panel */}
                             <div
+                                className="border-b md:border-b-0 md:border-r"
                                 style={{
+                                    borderColor: `${project.accent}20`,
                                     padding: "40px 32px",
                                     background: `linear-gradient(160deg, ${project.accent}15 0%, transparent 60%)`,
-                                    borderRight: `1px solid ${project.accent}20`,
                                     display: "flex",
                                     flexDirection: "column",
                                     justifyContent: "space-between",
