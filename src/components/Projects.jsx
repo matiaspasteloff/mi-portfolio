@@ -14,8 +14,16 @@ const projectsData = [
         title: "Ludoteca",
         tech: ["Python", "Flask", "MVC", "Jinja2"],
         link: "https://github.com/matiaspasteloff/Ludoteca",
-        accent: "#8b5cf6",
+        accent: "#10b981",
         tag: "E-commerce",
+    },
+    {
+        number: "03",
+        title: "Finance Dashboard",
+        tech: ["React 19", "TypeScript", "Express 5", "Prisma", "PostgreSQL"],
+        link: "https://github.com/matiaspasteloff/dashboard-finanzas",
+        accent: "#6d28d9",
+        tag: "Full Stack",
     },
 ];
 
