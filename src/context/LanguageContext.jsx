@@ -14,7 +14,7 @@ const translations = {
             stats: [
                 { value: '6', label: 'Años programando' },
                 { value: '3°', label: 'Año en UBA' },
-                { value: '2+', label: 'Proyectos publicados' },
+                { value: '3+', label: 'Proyectos publicados' },
             ],
             quote: '"Transformando la teoría de la ingeniería en soluciones de software eficientes y escalables."',
             p1: 'Soy estudiante de 3º año de Ingeniería en Informática en la <strong style="color:#cbd5e1">UBA</strong>, con una sólida formación técnica base iniciada en la escuela <strong style="color:#cbd5e1">ORT</strong>. Llevo 6 años inmerso en el mundo de la programación, construyendo una base fuerte en lógica y algoritmos.',
@@ -59,7 +59,7 @@ const translations = {
             stats: [
                 { value: '6', label: 'Years coding' },
                 { value: '3rd', label: 'Year at UBA' },
-                { value: '2+', label: 'Published projects' },
+                { value: '3+', label: 'Published projects' },
             ],
             quote: '"Transforming engineering theory into efficient and scalable software solutions."',
             p1: 'I am a 3rd-year Computer Engineering student at <strong style="color:#cbd5e1">UBA</strong>, with a solid technical foundation built at <strong style="color:#cbd5e1">ORT</strong> school. I have spent 6 years immersed in the world of programming, building a strong base in logic and algorithms.',
@@ -104,7 +104,7 @@ const translations = {
             stats: [
                 { value: '6', label: 'Anos programando' },
                 { value: '3°', label: 'Ano na UBA' },
-                { value: '2+', label: 'Projetos publicados' },
+                { value: '3+', label: 'Projetos publicados' },
             ],
             quote: '"Transformando a teoria da engenharia em soluções de software eficientes e escaláveis."',
             p1: 'Sou estudante do 3º ano de Engenharia da Computação na <strong style="color:#cbd5e1">UBA</strong>, com uma sólida formação técnica iniciada na escola <strong style="color:#cbd5e1">ORT</strong>. Tenho 6 anos imerso no mundo da programação, construindo uma base sólida em lógica e algoritmos.',
@@ -150,7 +150,7 @@ const translations = {
             stats: [
                 { value: '6', label: '编程年限' },
                 { value: '3年级', label: 'UBA在读' },
-                { value: '2+', label: '已发布项目' },
+                { value: '3+', label: '已发布项目' },
             ],
             quote: '"将工程理论转化为高效、可扩展的软件解决方案。"',
             p1: '我是<strong style="color:#cbd5e1">UBA</strong>（布宜诺斯艾利斯大学）计算机工程专业三年级学生，在<strong style="color:#cbd5e1">ORT</strong>学校奠定了扎实的技术基础。我在编程领域浸润了6年，在逻辑与算法方面积累了深厚功底。',
