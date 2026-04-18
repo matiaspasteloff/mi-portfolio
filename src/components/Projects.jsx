@@ -25,6 +25,14 @@ const projectsData = [
         accent: "#6d28d9",
         tag: "Full Stack",
     },
+    {
+        number: "04",
+        title: "BookLog",
+        tech: ["React 19", "FastAPI", "PostgreSQL", "SQLAlchemy", "Google Books API"],
+        link: "https://github.com/matiaspasteloff/paperboxd",
+        accent: "#c8943a",
+        tag: "Full Stack",
+    },
 ];
 
 const Projects = () => {
